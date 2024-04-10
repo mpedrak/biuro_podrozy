@@ -1,0 +1,125 @@
+section
+{
+    border-radius: 1em;
+    padding: 1em;
+    width: 35em;
+    height: 50em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+section *
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1 
+{
+    font-size: 1.9em;
+}
+h2 
+{
+    font-size: 1.7em;
+}
+h3 
+{
+    font-size: 1.5em;
+}
+section img 
+{
+    width: 12em;
+    height: 12em;
+    border-radius: 50%;
+}
+section p 
+{
+    text-align: center;
+    max-height: 5em;
+    overflow-y: auto;
+}
+section button
+{
+    cursor: pointer;
+    border-radius: 1em;
+    text-align: center;
+    border: 0;
+    font-size: 2em;
+}
+.p1
+{
+    background-color: red;
+    color: white;
+
+}
+.p3
+{
+    background-color:aqua;
+    color: green;
+}
+.p4
+{
+    background-color: orange;
+    color: black;
+}
+.p2
+{
+    background-color: purple;
+    color: orange;
+}
+.b1 
+{
+    border: 0.2em solid green;
+}
+.b2 
+{
+    border: 0.2em solid red;
+}
+.b3 
+{
+    border: 0.1em solid grey;
+}
+#plus
+{
+    background-color: orange;
+}
+#divDlaPlusowIminusow button
+{
+    margin: 0.2em 0em;
+}
+#usunWycieczke
+{
+    font-size: 1.5em;
+    padding: 0.2em 1em;
+    width: 10em;
+}
+.gwiadki
+{
+    font-size: 1.7em;
+    user-select: none;
+}
+.srednia 
+{
+    display: inline;
+    font-size: 1.7em;
+    margin-left: 1.7em;
+    position: relative;
+    bottom: 0.15em;
+}
+#divDlaPlusowIminusow
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 0em 3em;
+    width: 35em;
+}
+#plus, #minus
+{
+    width: 1.7em;
+}
+#to
+{
+    display: flex;
+}

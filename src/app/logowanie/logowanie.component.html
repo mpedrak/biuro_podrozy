@@ -1,0 +1,8 @@
+<section>
+    <h1>Logowanie</h1>
+    <form>
+        <input #login id = "login" type="text" placeholder="Login">
+        <input #haslo id = "haslo" type="password" placeholder="Hasło">
+        <input value="Zaloguj" type="button" (click)="zaloguj(login.value, haslo.value)" id="button">
+    </form>
+</section>

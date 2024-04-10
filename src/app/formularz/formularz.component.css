@@ -1,0 +1,57 @@
+form 
+{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+form * 
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.3em;
+}
+div 
+{
+    display: flex;
+    margin-bottom: 0.3em;
+}
+label 
+{
+    width: 20%;
+}
+input 
+{
+    width: 80%;
+}
+button
+{
+    margin-top: 0.5em;
+    height: 2em;
+    border: 0.15em solid gray;
+    border-radius: 1em;
+    width: 30%;
+    cursor: pointer;
+}
+#last 
+{
+    justify-content: center;
+}
+span 
+{
+    position: absolute;
+    right: 1.75em;
+    margin-top: 0.2em;
+    text-align: left;
+    color: red;
+    background-color: white;
+    padding: 0;
+    border: 0;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button /* Chrome, Safari, Edge, Opera */
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] /* Firefox */
+{
+    -moz-appearance: textfield;
+}

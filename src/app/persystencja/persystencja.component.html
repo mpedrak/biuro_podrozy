@@ -1,0 +1,23 @@
+<main>
+    <div>Zmień tryb persystencji</div>
+    <select #to (change) = "zmienToNaP(to.value)">
+        <option value="" selected disabled hidden></option>
+        <option value="local" >LOCAL</option>
+        <option value="session">SESSION </option>
+        <option value="none">NONE</option>
+    </select>
+</main>
+<section>
+    <p> Możliwe 3 opcje do wyboru: </p>
+    <p> • LOCAL (DOMYŚLNE) - użytkownik nadal zostaje zalogowany po zamknięciu karty,
+        trzeba jawnie użyć metody signOut aby wyczyścić stan zalogowania. Przydatne, jeśli po
+        zamknięciu karty i ponownym powrocie, chcemy użytkownikowi pozwolić pozostać
+        zalogowanym. </p>
+    <p> • SESSION - stan zalogowanego użytkownika jest aktywny wyłącznie dla aktualnej sesji i
+        zostanie wyczyszczony w przypadku zamknięcia okna/karty. Przydatne np. w aplikacjach, które
+        są publicznie dostępne na komputerach, z których korzysta wielu użytkowników (np. w
+        bibliotece). </p>
+    <p> • NONE - stan zalogowania jest przetrzymywany w pamięci i zostanie wyczyszczony po
+        odświeżeniu okna. </p>    
+</section>
+

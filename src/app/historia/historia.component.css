@@ -1,0 +1,59 @@
+div>div
+{
+    display: inline;
+}
+section * 
+{
+    font-size: 1.25em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+section
+{
+    margin: 2em;
+}
+section>div
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+.d1
+{
+    width: 64%;
+}
+.d2
+{
+    width: 12%;
+    text-align: center;
+}
+.d3
+{
+    width: 12%;
+    text-align: center;
+}
+.d4
+{
+    width: 12%;
+    text-align: center;
+}
+#pasek 
+{
+    border-bottom: 0.1em solid lightgray;
+}
+main 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+main *
+{
+    width: 10em;
+    font-size: 1.2em;
+    margin: 0.2em;
+}
+main div
+{
+    font-size: 1.5em;
+}

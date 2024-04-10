@@ -1,0 +1,28 @@
+<main>
+    <div>Zmień walutę</div>
+    <select #to (change) = "zmienWalute(to.value)">
+        <option value="" selected disabled hidden></option>
+        <option value="PLN" >Złote</option>
+        <option value="£">Funty</option>
+        <option value="USD">Dolary</option>
+    </select>
+</main>
+<section>
+    <div>
+        <div class="d1">Nazwa wycieczki</div>
+        <div class="d2">Kraj docelowy</div>
+        <div class="d3">Cena jednostkowa w {{waluta}}</div>
+        <div class="d4">Ilość</div>
+        <div class="d5">Kup</div>
+    </div>
+    <div id="pasek"></div>
+    <div *ngFor = "let x of wycieczki">
+        <div class="d1">{{x.nazwa}}</div>
+        <div class="d2">{{x.kraj}}</div>
+        <div class="d3">{{x.cena}}</div>
+        <div class="d4">{{x.iloscZarezerwowanych}}</div>
+        <div class="d5">
+            <button (click)="kup(x.id)">💰</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,29 @@
+<section *ngIf = "dane != null" [ngClass]="{'b1': priorytet == '1', 'b2' : priorytet == '2', 'b3': priorytet == '0'}">
+    <h1>{{dane.nazwa | uppercase}}</h1>
+    <h2>{{dane.kraj | uppercase}}</h2>
+    <h3>{{dane.dataStartu}} - {{dane.dataKonca}}</h3>
+    <h2>Cena: {{dane.cena}} {{waluta}}</h2>
+    <div id="to">
+        <h2 *ngIf="dane.miejsca - dane.iloscZarezerwowanych > 0; else brakMiejsc">Miejsca: {{dane.miejsca - dane.iloscZarezerwowanych}}</h2>
+        <ng-template #brakMiejsc><h2>Brak miejsc</h2></ng-template>
+        <div id="oceny">
+            <p *ngIf = "dane.iloscOcen > 0; else brakOcen" class="srednia">Ocena: {{(dane.sumaOcen / dane.iloscOcen).toPrecision(2)}} ☆</p>
+            <ng-template #brakOcen><p class="srednia">Brak ocen</p></ng-template>
+        </div>
+    </div>
+    <p>{{dane.opis}}</p>
+    <a routerLink = "/wycieczka/{{dane.id}}">
+        <img [src] = "dane.zdjecie[0]">
+    </a>
+    <div id="divDlaPlusowIminusow">
+        <button id="plus" (click) = "usun()" [ngStyle] = "dane.miejsca - dane.iloscZarezerwowanych != dane.miejsca ? {opacity: '1', cursor: 'pointer'} : 
+        {opacity: '0.1', cursor: 'auto'}"><b>-</b></button>
+        <button id="minus" (click) = "dodaj()" [ngStyle] = 
+        "dane.miejsca - dane.iloscZarezerwowanych > 0 ? {opacity: '1', cursor: 'pointer'} : {opacity: '0.1', cursor: 'auto'}"
+        [ngClass]="{'p1': dane.miejsca - dane.iloscZarezerwowanych == 1, 'p2' : dane.miejsca - dane.iloscZarezerwowanych == 2, 
+        'p3': dane.miejsca - dane.iloscZarezerwowanych == 3, 'p4' : dane.miejsca - dane.iloscZarezerwowanych > 3 }"
+        >+</button>
+        <button id="usunWycieczke" (click) = "usunWycieczke()">Usuń wycieczke</button>
+    </div>
+    
+</section>

@@ -1,0 +1,53 @@
+<a routerLink = "/glowna">« Powrót</a>
+<main>
+<section *ngIf = "dane != null" [ngClass]="{'b1': priorytet == '1', 'b2' : priorytet == '2', 'b3': priorytet == '0'}">
+    <h1>{{dane.nazwa | uppercase}}</h1>
+    <h2>{{dane.kraj | uppercase}}</h2>
+    <h3>Od: {{dane.dataStartu}}</h3>
+    <h3>Do: {{dane.dataKonca}}</h3>
+    <h2>Cena: {{dane.cena}} {{waluta}}</h2>
+    <h2 *ngIf="dane.miejsca - dane.iloscZarezerwowanych > 0; else brakMiejsc">Miejsca: {{dane.miejsca - dane.iloscZarezerwowanych}}</h2>
+    <ng-template #brakMiejsc><h2>Brak miejsc</h2></ng-template>
+    <p>{{dane.opis}}</p>
+    <div id="wLewo" (click) = "wLewo()"><</div>
+    <div id="wPrawo" (click) = "wPrawo()">></div>
+    <img [src] = "dane.zdjecie[aktaulneZdjecie]">
+    <div id="oceny">
+        <p *ngIf = "dane.iloscOcen > 0; else brakOcen" class="srednia">Średnia ocena: {{(dane.sumaOcen / dane.iloscOcen).toPrecision(2)}} ☆ - Ilość ocen: {{dane.iloscOcen}}</p>
+        <ng-template #brakOcen><p class="srednia">Brak wystawionych ocen</p></ng-template>
+    </div>
+    <div id="divDlaPlusowIminusow">
+        <button id="plus" (click) = "usun()" [ngStyle] = "dane.miejsca - dane.iloscZarezerwowanych != dane.miejsca ? {opacity: '1', cursor: 'pointer'} : 
+        {opacity: '0.1', cursor: 'auto'}"><b>-</b></button>
+        <button id="minus" (click) = "dodaj()" [ngStyle] = 
+        "dane.miejsca - dane.iloscZarezerwowanych > 0 ? {opacity: '1', cursor: 'pointer'} : {opacity: '0.1', cursor: 'auto'}"
+        [ngClass]="{'p1': dane.miejsca - dane.iloscZarezerwowanych == 1, 'p2' : dane.miejsca - dane.iloscZarezerwowanych == 2, 
+        'p3': dane.miejsca - dane.iloscZarezerwowanych == 3, 'p4' : dane.miejsca - dane.iloscZarezerwowanych > 3 }"
+        >+</button>
+    </div>
+</section>
+<div *ngIf = "dane != null" id="wystawianieOpini">
+    <div>Oceń wycieczkę: </div>
+    <ngb-rating class="gwiadki" [(rate)]="wystawionaOcena" [max] = "5" (rateChange) = "dodajOcene()"
+        [resettable] = "true"></ngb-rating>
+    <div>Dodaj opinie (data zakupu / skorzystania z wycieczki jest opcjonalna)</div>
+    <form>
+        <input #nick id = "nick" type="text" placeholder="Twój nick">
+        <input #nazwa id = "nazwa" type="text" placeholder="Nazwa wycieczki" value="{{dane.nazwa}}">
+        <textarea #opis id = "opis" type="text" placeholder="Recenzja (51-499) znaków"></textarea>
+        <input #data id="data" type="date" placeholder="Data zakupu / skorzystania z wycieczki">
+        <input value="Wyślij" type="button" (click)="opis.value=stworz(nick.value, nazwa.value, opis.value, data.value)" id="button">
+    </form>
+    <div>Wystawione opinie</div>
+    <div *ngFor = "let x of opinie" class="pojedyncze">
+        <h1>{{x.nick}}</h1>
+        <h2>{{x.nazwa}}</h2>
+        <h3 class="opis">{{x.opis}}</h3>
+        <h4>{{x.data}}</h4>
+    </div>
+    <div *ngIf = "opinie.length == 0">Brak opini</div>
+</div>
+</main>
+
+
+

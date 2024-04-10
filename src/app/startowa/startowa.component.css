@@ -1,0 +1,26 @@
+section 
+{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 3em 0 7em 0;
+}
+h2 
+{
+    margin-bottom: 1em;
+}
+#to *
+{
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+    margin: 0 1em;
+    cursor: pointer;
+    border: 0.1em solid lightgray;
+    border-radius: 1em;
+    padding: 0.3em 0.7em;
+}
+#to 
+{
+    margin: 2em 0 4em 0;
+}

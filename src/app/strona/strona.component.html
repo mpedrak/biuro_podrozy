@@ -1,0 +1,9 @@
+<main *ngIf = "wycieczkiPosortowane != null && wycieczkiPosortowane[wycieczkiPosortowane.length - 1] != null">
+    <app-wycieczka *ngFor="let x of wycieczki" 
+    [id] = x.id 
+    [priorytet] = "x.cena == wycieczkiPosortowane[wycieczkiPosortowane.length - 1].cena ? 1 : x.cena == wycieczkiPosortowane[0].cena ? 2 : 0"
+    waluta = {{waluta}}
+    (update) = "update()"
+    ></app-wycieczka>
+</main>
+

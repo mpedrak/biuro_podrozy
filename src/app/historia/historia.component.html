@@ -1,0 +1,30 @@
+<main>
+    <div>Filtruj po statusie</div>
+    <select #to (change) = "zmienStatus(to.value)">
+        <option value="" selected disabled hidden></option>
+        <option value="Wszystkie" >Wszystkie</option>
+        <option value="Oczekujaca" >Oczekujące</option>
+        <option value="Aktywna">Aktywne</option>
+        <option value="Archiwalna">Archiwalne</option>
+    </select>
+</main>
+<section>
+    <div>
+        <div class="d1">Informacje o wycieczce</div>
+        <div class="d2">Ilość biletów</div>
+        <div class="d3">Data kupna</div>
+        <div class="d4">Status</div>
+    </div>
+    <div id="pasek"></div>
+    <div *ngFor = "let x of kupione">
+        <div class="d1">
+            {{x.dane.nazwa}},&#160;
+            Cena: {{x.dane.cena * x.biletow}} {{waluta}},&#160;
+            {{x.dane.dataStartu}} do {{x.dane.dataKonca}},&#160;
+            {{x.dane.kraj}}
+        </div>
+        <div class="d2">{{x.biletow}}</div>
+        <div class="d3">{{x.data}}</div>
+        <div class="d4">{{x.status}}</div>
+    </div>
+</section>

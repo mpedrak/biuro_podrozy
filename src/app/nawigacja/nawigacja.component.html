@@ -1,0 +1,31 @@
+<section *ngIf = "uzytkownik != null; else niezalogowany">
+    <a routerLink="/startowa">Start</a>
+    <a routerLink="/glowna">Katalog</a>
+    <a routerLink="/dodawanie">Dodawanie</a>
+    <a routerLink="/koszyk">Koszyk</a>
+    <a routerLink="/historia">Historia</a>
+    <a routerLink="/persystencja">Admin</a>
+    <div id="to">
+        <div id="koszyk" class="nieDlaMalych">
+            🛒 {{ilosc}} za {{suma}} {{waluta}}
+        </div>
+        <a id="uzytkownik" routerLink="/persystencja"> {{uzytkownik.email}} </a> 
+        <div id="wyloguj" (click) = "wyloguj()">
+            <img src = "../assets/wyloguj.png" >
+        </div>
+        <div class="nieDlaMalych">
+            <img [ngClass]="{'img1': ileOczekujacych == 0, 'img2' : ileOczekujacych > 0}"
+            src="../assets/wykrzyknik.jpg" (mouseenter) = "mE()" (mouseleave) = "mL()">
+        </div>
+    </div> 
+</section>
+<div id="pasek"></div>
+<div *ngIf = "pokaz == true" class="powiadomienie">Ilość zbliżających sie do startu <br>
+     wycieczek: {{ileOczekujacych}}</div>
+
+<ng-template #niezalogowany>
+    <section class="to2">
+        <a routerLink="/logowanie">Zaloguj się</a>
+        <a routerLink="/rejestrowanie">Zarejestruj się</a>
+    </section>
+</ng-template>

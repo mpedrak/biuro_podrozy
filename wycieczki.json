@@ -1,0 +1,151 @@
+{
+"wycieczki" : 
+[
+    {
+        "id" : 1,
+        "nazwa" : "Boże Narodzenie w Rzymie", 
+        "kraj" : "Włochy", 
+        "dataStartu" : "2022-12-22",
+        "dataKonca" : "2022-12-27",
+        "cena" : "1499",
+        "miejsca" : 9,
+        "opis" : "Zapraszamy na odwiedziny Rzymu i Watykanu w niezwykłej, świątecznej atmosferze. Ulice są pięknie przystrojone tysiącami światełek.",
+        "zdjecie" : ["../../assets/images/3.png", "../../assets/images/3a.jpg", "../../assets/images/3b.jpg"],
+        "iloscOcen" : 10,
+        "sumaOcen" : 37,
+        "iloscZarezerwowanych" : 0
+    },
+    {
+        "id" : 2,
+        "nazwa" : "Moja Praga", 
+        "kraj" : "Czechy", 
+        "dataStartu" : "2023-04-13",
+        "dataKonca" : "2023-04-16",
+        "cena" : "1188",
+        "miejsca" : 5,
+        "opis" : "Dysponując kilkoma wolnymi dniami, można wspaniale spędzić czas bez konieczności organizowania długich wypraw. Wystarczy odwiedzić naszych południowych sąsiadów. ",
+        "zdjecie" : ["../../assets/images/1.png", "../../assets/images/1a.jpg", "../../assets/images/1b.jpg" ],
+        "iloscOcen" : 10,
+        "sumaOcen" : 47,
+        "iloscZarezerwowanych" : 0
+    },
+    {
+        "id" : 3,
+        "nazwa" : "Ale škoda!", 
+        "kraj" : "Czechy", 
+        "dataStartu" : "2023-08-24",
+        "dataKonca" : "2023-08-27",
+        "cena" : "1288",
+        "miejsca" : 7,
+        "opis" : "Nasi południowi i zachodni sąsiedzi to kraje z mnóstwem atrakcji, zabytków, pełne pięknych widoków i miejsc, które zainteresują każdego turystę. ",
+        "zdjecie" : ["../../assets/images/2.png", "../../assets/images/2a.jpg", "../../assets/images/2b.jpg" ],
+        "iloscOcen" : 10,
+        "sumaOcen" : 48,
+        "iloscZarezerwowanych" : 0
+    },
+    {
+        "id" : 4,
+        "nazwa" : "Magiczny Orient", 
+        "kraj" : "Turcja", 
+        "dataStartu" : "2022-12-23",
+        "dataKonca" : "2022-12-30",
+        "cena" : "1577",
+        "miejsca" : 11,
+        "opis" : "Pasjonujące zabytki, lokalne klimaty, zapachy i smaki Orientu w tygodniu pełnym atrakcji. Na trasie fascynująca i tajemnicza Kapadocja.",
+        "zdjecie" : ["../../assets/images/5.png", "../../assets/images/5b.jpeg", "../../assets/images/5a.jpg" ],
+        "iloscOcen" : 10,
+        "sumaOcen" : 32,
+        "iloscZarezerwowanych" : 0
+    },
+    {
+        "id" : 5,
+        "nazwa" : "Sylwestrowy Paryż", 
+        "kraj" : "Francja", 
+        "dataStartu" : "2022-12-29",
+        "dataKonca" : "2023-01-02",
+        "cena" : "1569",
+        "miejsca" : 7,
+        "opis" : "Sylwester w Paryżu to niezapomniane dni pełne wrażeń! Wspólne odkrywanie najpiękniejszych miejsc i podróż śladami wybitnych osobistości i artystów.",
+        "zdjecie" : ["../../assets/images/4.png", "../../assets/images/4a.jpeg", "../../assets/images/4b.jpg" ],
+        "iloscOcen" : 10,
+        "sumaOcen" : 50,
+        "iloscZarezerwowanych" : 0
+    },
+    {
+        "id" : 6,
+        "nazwa" : "Rajskie Safari", 
+        "kraj" : "Tanzania", 
+        "dataStartu" : "2023-01-01",
+        "dataKonca" : " 2023-01-08",
+        "cena" : "37118",
+        "miejsca" : 11,
+        "opis" : "Niezapomniana przygoda i magiczna podróż do dzikich zakątków Afryki. W programie wypoczynek w luksusowych, pięciogwiazdkowych hotelach sieci Neptune.",
+        "zdjecie" : ["../../assets/images/6.png", "../../assets/images/6a.jpeg", "../../assets/images/6b.jpg" ],
+        "iloscOcen" : 10,
+        "sumaOcen" : 40,
+        "iloscZarezerwowanych" : 0
+    },
+    {
+        "id" : 7,
+        "nazwa" : "W Rytmie Flamenco", 
+        "kraj" : "Hiszpania", 
+        "dataStartu" : "2023-01-14",
+        "dataKonca" : "2023-01-21",
+        "cena" : "8658",
+        "miejsca" : 17,
+        "opis" : "W Andaluzji można odnaleźć wszystko to, co kojarzy się z Hiszpanią: flamenco, kastaniety, corridę, białe wioski, piaszczyste plaże i oczywiście hiszpańskie słońce.",
+        "zdjecie" : ["../../assets/images/7.png", "../../assets/images/7a.jpg", "../../assets/images/7b.jpg" ],
+        "iloscOcen" : 10,
+        "sumaOcen" : 37,
+        "iloscZarezerwowanych" : 0
+    },
+    {
+        "id" : 8,
+        "nazwa" : "Off-Road w Omanie", 
+        "kraj" : "Oman", 
+        "dataStartu" : "2023-02-08",
+        "dataKonca" : "2023-02-15",
+        "cena" : "21198",
+        "miejsca" : 7,
+        "opis" : "Podróż do orientalnego Omanu, pełnego tajemnic i miejsc przywodzących klimat „Baśni 1001 nocy”, to połączenie pięknych widoków, historycznych zabytków, gościnności mieszkańców.",
+        "zdjecie" : ["../../assets/images/8.png", "../../assets/images/8a.jpg", "../../assets/images/8b.jpg" ],
+        "iloscOcen" : 10,
+        "sumaOcen" : 43,
+        "iloscZarezerwowanych" : 0
+    },
+    {
+        "id" : 9,
+        "nazwa" : "Bajkowy Weekend", 
+        "kraj" : "Francja", 
+        "dataStartu" : "2023-04-28",
+        "dataKonca" : "2023-05-01",
+        "cena" : "4738",
+        "miejsca" : 13,
+        "opis" : "Szalony weekend w Paryżu i Disneylandzie, zabawa dla dzieci i dorosłych. Najważniejsze zabytki, najciekawsze miejsca, słynne paryskie metro, rejs po Sekwanie, wjazd na wieżę Eiffla.",
+        "zdjecie" : ["../../assets/images/9.png", "../../assets/images/9a.jpg", "../../assets/images/9b.jpg" ],
+        "iloscOcen" : 10,
+        "sumaOcen" : 50,
+        "iloscZarezerwowanych" : 0
+    },
+    {
+        "id" : 10,
+        "nazwa" : "Ziemia obiecana", 
+        "kraj" : "Izrael", 
+        "dataStartu" : "2023-04-28",
+        "dataKonca" : "2023-05-05",
+        "cena" : "9530",
+        "miejsca" : 10,
+        "opis" : "Wiza nie jest wymagana dla obywateli Polski w przypadku pobytów o długości maks. 90 dni. Przekroczenie granicy jest możliwe na podstawie paszportu. Paszport musi być ważny.",
+        "zdjecie" : ["../../assets/images/10.png", "../../assets/images/10a.jpg", "../../assets/images/10b.jpg" ],
+        "iloscOcen" : 10,
+        "sumaOcen" : 10,
+        "iloscZarezerwowanych" : 0
+    }
+],
+"ogolne" : 
+[
+    {"waluta" : "PLN"}
+]
+}
+
+

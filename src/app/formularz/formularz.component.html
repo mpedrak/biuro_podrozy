@@ -1,0 +1,48 @@
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+
+    <div>
+        <label class="col-2 col-form-label">Nazwa:</label>
+        <input type="text" class="form-control" name="nazwa" formControlName="nazwa">
+        <span *ngIf="formErrors.nazwa" class="alert alert-danger">{{ formErrors.nazwa }}</span>
+    </div>
+    <div>
+        <label class="col-2 col-form-label">Kraj docelowy:</label>
+        <input type="text" class="form-control" name="kraj" formControlName="kraj">
+        <span *ngIf="formErrors.kraj" class="alert alert-danger">{{ formErrors.kraj }}</span>
+    </div>
+    <div>
+        <label class="col-2 col-form-label">Data rozpoczęcia:</label>
+        <input type="date" class="form-control" name="dataStartu" formControlName="dataStartu">
+        <span *ngIf="formErrors.dataStartu" class="alert alert-danger">{{ formErrors.dataStartu }}</span>
+    </div>
+    <div>
+        <label class="col-2 col-form-label">Data zakończenia:</label>
+        <input type="date" class="form-control" name="dataKonca" formControlName="dataKonca">
+        <span *ngIf="formErrors.dataKonca" class="alert alert-danger">{{ formErrors.dataKonca }}</span>
+    </div>
+    <div>
+        <label class="col-2 col-form-label">Cena:</label>
+        <input type="number" class="form-control" name="cena" formControlName="cena">   
+        <span *ngIf="formErrors.cena" class="alert alert-danger">{{ formErrors.cena }}</span>
+    </div>
+    <div>
+        <label class="col-2 col-form-label">Ilość miejsc:</label>
+        <input type="number" class="form-control" name="miejsca" formControlName="miejsca" >  
+        <span *ngIf="formErrors.miejsca" class="alert alert-danger">{{ formErrors.miejsca }}</span>
+    </div>
+    <div>
+        <label class="col-2 col-form-label">Opis:</label>
+        <input type="text" class="form-control" name="opis" formControlName="opis" >
+        <span *ngIf="formErrors.opis" class="alert alert-danger">{{ formErrors.opis }}</span>
+    </div>
+    <div>
+        <label class="col-2 col-form-label">Scieżki zdjęć:</label>
+        <input type="text" class="form-control" name="zdjecie" formControlName="zdjecie"> 
+        <span *ngIf="formErrors.zdjecie" class="alert alert-danger">{{ formErrors.zdjecie }}</span>
+    </div>
+    <div id="last">
+        <button [disabled]="!modelForm.valid" type="submit">Stwórz</button>
+    </div>
+    
+  </form>
+  
