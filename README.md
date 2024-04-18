@@ -1,6 +1,6 @@
 # Travel agency
 
-Travel agency website created in Angular for the Introduction to web applications course.
+Travel agency website created in Angular for the AGH UST Introduction to web applications course.
 
 <br /><br /><br />
 
