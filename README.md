@@ -1,6 +1,6 @@
-# Biuro podroży
+# Travel agency
 
-Projekt strony internetowej biura podrózy stworzony w Angularze na potrzeby kursy Wprowadzenie do aplikacji internetowych AGH.
+Travel agency website created in Angular for the Introduction to web applications course.
 
 <br /><br /><br />
 
